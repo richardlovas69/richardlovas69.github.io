@@ -294,7 +294,7 @@ div.message-last , div.message-response {
 div.message-last , div.message-response, div.message-active {
 	padding: 10px;
 	font-family: Roboto;
-	font-weight: 500;
+	font-weight: 600;
 	font-size:30px ;
 	margin-bottom: 15px;
 }
