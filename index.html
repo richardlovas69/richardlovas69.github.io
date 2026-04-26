@@ -28,6 +28,7 @@ style=
 "
 width: 40px;
 height: 40px;
+display:none;
 top: calc(100% - 80px);
 left: calc(50% - 20px);
 " 
@@ -412,9 +413,6 @@ const myDiv = document.getElementById('scrollUp');
     if (window.scrollY > 100) {
       myDiv.style.position = 'sticky';
       myDiv.style.display = 'block';
-    } else {
-      myDiv.style.position = 'absolute';
-      myDiv.style.display = 'none';
     }
   });
 
