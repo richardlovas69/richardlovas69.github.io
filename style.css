@@ -318,7 +318,7 @@ div.time-active p {
 /* ----- text bar ----- */
 div.textbar {
 	width: 100%;
-	height: 65px;
+	height: 70px;
 	display: flex;
 	flex-flow: row;
 	flex-wrap: nowrap;
