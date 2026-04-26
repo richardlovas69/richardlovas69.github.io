@@ -1,0 +1,425 @@
+@media (min-width: 344px) {
+
+	html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
+	height: auto;
+}
+
+#scrollUp img {
+	width:40px ;
+	height: auto;
+}
+
+#ai-icon img {
+	width: 55px;
+	height: auto;
+}
+#create-message img {
+	width: 55px;
+	height: auto;
+
+}
+
+header.main-header {
+	width: 100%;
+	height:auto;
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: center;
+}
+header h1 {
+	color: #FFFFFF;
+	font-size: 25px;
+	display: flex;
+	font-family: Roboto;
+	font-weight: 400;
+}
+#spravy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#google {
+	width: 110px;
+	height: auto;
+	margin-left: -7px;
+}
+
+.search-account {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+
+.search-account-body {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	padding: 15px 15px;
+}
+
+#search-icon {
+	width: 30px;
+	height: auto;
+	margin-right: 15px;
+}	
+
+#account-icon{
+	width: 30px;
+	height: auto;
+}
+
+
+.body {
+	width: 100%;
+	height: auto;
+	display: flex;
+	background-color: #121318;
+	border-radius: 25px 25px 0px 0px;
+
+}
+
+.body-main {
+	width: 100%;
+	height: auto;
+	padding: 20px 10px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.message {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 30px;
+}
+
+.message-left-image {
+	margin-right: 10px;
+}
+
+.message-left-image img {
+	width: 42px;
+}
+
+.message-center-text {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 4;
+}
+
+.message-right-up {
+	margin-bottom: 8px;
+} 
+
+.message-right-up h2 {
+	font-family: Roboto;
+	font-weight: 400;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+
+.message-right-down p {
+	color: #FFFFFF;
+	font-family: Roboto;
+	font-weight: 400;
+	color: #FFFFFF;
+	font-size: 14px;
+
+}
+
+.message-right-icon {
+	display: inherit;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-right: 10px;
+	padding-bottom: 5px;
+
+}
+
+.day-week {
+	display: inherit;
+	justify-content: flex-end;
+	padding-right: 2px;
+
+}
+
+.day-week p {
+	font-family: Roboto;
+	font-weight: 600;
+	font-size: 12px;
+	color: #c4c4c4;
+
+}
+
+.pin {
+	display: inherit;
+	flex-flow: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+
+img.pin-contact {
+	width: 25px;
+	height: auto;
+}
+
+img.unread {
+	width: 18px;
+	height: auto;
+}
+
+/*  chat styles  */
+
+header.header-messageRoom{
+	width: 100%;
+	height: auto;
+	background-color: #1e1f24;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	padding: 10px 0;
+}
+div.back-icon {
+	height: auto;
+	display: inherit;
+	flex-grow: 1;
+	margin-right: 10px;
+	justify-content: center;
+	align-items: center;
+}
+div.back-icon a {
+	height: auto;
+	display: flex;
+}
+div.back-icon a img {
+	width: 35px;
+	height: 35px;
+
+}
+div.contact-img-name {
+	display: inherit;
+	flex-flow: row;
+	align-items: center;
+	flex-grow: 10;
+}
+div.contact-img-name img {
+	width: 45px;
+	height: auto;
+	margin-right: 10px;
+}
+div.contact-img-name h2 {
+	font-family: Roboto;
+	font-weight: 600;
+	font-size: 17px;
+	color: #ffffff;
+}
+div.call-settings-icon {
+	flex-basis: auto;
+	display: inherit;
+	flex-grow: 1;
+	align-items: stretch;
+}
+div.call-settings-icon img {
+	width: 45px;
+	height: 45px;
+}
+
+/* --- BODY CHAT ---  */
+
+
+div.body-chat {
+	width: 100%;
+	height: auto;
+	background-color:#121318;
+	border-top-left-radius:20px ;
+	border-top-right-radius:20px ;
+}
+div.body-chat-inner {
+	width: 100%;
+	height: 775px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-flow: column;
+	overflow-y: scroll;
+}
+div.message-active {
+	background-color: #a6baff;
+	align-self: flex-end;
+	margin-right: 10px;
+}
+div.message-active h2 {
+	color: #1e1f24;
+	margin: 0 1px;
+}
+div.message-last , div.message-response {
+	background-color: #1e1f24;
+	width: 85%;
+	height: auto;
+	color: #ffffff;
+	margin-left: 10px;
+	line-height: 1.5;
+}
+
+div.message-last , div.message-response, div.message-active {
+	padding: 10px;
+	font-family: Roboto;
+	font-weight: 500;
+	font-size:30px ;
+	margin-bottom: 15px;
+}
+div.time-active {
+	width: 100%;
+	height: auto;
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+div.time-active p {
+	font-family: Roboto;
+	color: #989898;
+	font-weight: 600;
+	font-size: 10px;
+}
+
+
+/* ----- text bar ----- */
+div.textbar {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: nowrap;
+	background-color:#121318;
+	justify-content: flex-start;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	padding-top: 20px;
+}
+div.textbar-inner {
+	width: 240px;
+	display: inherit;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	flex-grow: 4;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #1e1f24;
+	margin-right: 15px;
+	padding: 10px 5px 10px 20px;
+	border-radius: 9999px;
+	margin:0 5px 10px 10px;
+
+
+}
+#send input {
+	width: 115px;
+	border-radius: 9999px;
+	border-style: none;
+	resize: none;
+	background-color:#1e1f24;
+	padding-left: 5px;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	margin-right: 10px;
+  	font-family: Roboto;
+	font-weight: 600;
+	font-size:20px;
+	color: #FFFFFF;
+}
+#send input::placeholder {
+	font-family: Roboto;
+	font-weight: 600;
+	font-size:20px;
+	color: #FFFFFF;
+}
+#add-icon {
+	width: 35px;
+	height: auto;
+	margin-right: 20px;
+} 
+div.textbar img {
+	width: 40px;
+	height: auto;
+	display: flex;
+	align-self: flex-end;
+}
+div.textbar-inner img {
+	width: 30px;
+	height: 30px;
+}
+div.textbar-voice {
+	height: auto;
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	background-color: #1e1f24;
+	border-radius: 999px;
+	margin-right: 10px;
+	padding: 6px;
+	margin-bottom: 10px;
+}
+div.textbar-voice a  {
+	height: auto;
+	display: flex;
+}
+div.textbar-voice a img {
+	width: 35px;
+	height: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
