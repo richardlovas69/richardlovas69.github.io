@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Message-chat</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<style>
+		.round {
+			border-radius: 15px;
+		}
+	</style>
+</head>
+<body style="
+background-color: #1e1f24;
+overflow-y: hidden;
+">
+
+<!-- #1e1f24 message color -->
+<!-- #121318; bg color -->
+<!-- #a6baff active message color-->
+
+
+<header class="header-messageRoom">
+
+	<div class="back-icon">
+		<a href="index.html">
+			<img src="images/arrow-back-icon.png">
+		</a>
+	</div>
+
+	<div class="contact-img-name">
+		<img src="images/contact-icon-dark.png">
+		<h2>1166</h2>
+	</div>
+
+	<div class="call-settings-icon">
+		<img src="images/call-icon.png">
+		<img src="images/settings-icon.png">
+	</div>
+</header>
+
+<div class="body-chat">
+	<div id="body-chat-inner" class="body-chat-inner">
+
+		<div class="message-last round">
+			<h2>
+				DPMK, a.s.<br>
+				SMS prestupny CL<br>
+				1.50 EUR.<br>
+				Platnost od<br>
+				<span><!-- yesterday date dd/mm/yy --></span>
+				<span><!-- time --></span>
+
+				<span><!-- yesterday date dd/mm/yy --></span>
+				<span><!-- time + one hour --></span><br>
+				<span><!-- random string letter and num --></span>
+			</h2>
+		</div>
+
+		<div class="time-active">
+			<p><!-- time --></p>
+		</div>
+
+		<div class="message-active round">
+			<div>
+				<h2>
+					.
+					<!-- custom text -->
+				</h2>
+			</div>
+		</div>
+
+		<div class="message-response round">
+			<h2>
+				DPMK, a.s.<br>
+				SMS prestupny CL<br>
+				1.50 EUR.<br>
+				Platnost od<br>
+				23.3.2026 08:15 do<br>
+				9:15 do<br>
+				09:18 hod.<br>
+				SPu3MxEf
+			</h2>
+		</div>
+
+		<div class="message-active round">
+			<div>
+				<h2>
+					.
+					<!-- custom text -->
+				</h2>
+			</div>
+		</div>
+
+
+		<div class="message-last round">
+			<h2>
+				DPMK, a.s.<br>
+				SMS prestupny CL<br>
+				1.50 EUR.<br>
+				Platnost od<br>
+				<span id="yesterdayDate"></span>
+				8:18 do<br>
+				09:18 hod.<br>
+				DrPcFu7O
+			</h2>
+		</div>
+
+		<div class="time-active">
+			<p id="timeActive"><!-- time --></p>
+		</div>
+
+		<div class="message-active round">
+			<div>
+				<h2>
+					.
+					<!-- custom text -->
+				</h2>
+			</div>
+		</div>
+
+		<div style="
+		margin-bottom: 40px;
+		" class="message-response round">
+			<h2>
+				DPMK, a.s.<br>
+				SMS prestupny CL<br>
+				1.50 EUR.<br>
+				Platnost od<br>
+				<span id="timeToday"><!-- today date dd/mm/yy --></span>
+				<span id="dateToday"><!-- time --></span> do <br> 
+				<span id="timeTodayAdd"></span> hod.<br>
+				<span id="randomCode"></span>
+			</h2>
+		</div>
+
+	</div>
+</div>
+
+<div class="textbar">
+	<div class="textbar-inner">
+		<img id="add-icon" src="images/add-icon.png">
+		<div class="textarea-holder">
+			<form id="send">
+				<!--<textarea id="#" placeholder="Textova Sprava"></textarea>-->
+				<input name="dot" type="text" placeholder="Textova sprava" />
+			</form>
+		</div>
+		<img style="
+		margin-right: 15px;
+		" src="images/emoji-icon.png">
+		<img style="
+		margin-right: 15px;
+		" src="images/photo-icon.png">
+	</div>
+	<div class="textbar-voice">
+		<a href="#" id="newMsg">
+			<img src="images/voice-icon.png">
+		</a>
+
+	</div>
+</div>
+
+
+
+</body>
+<script>
+
+window.addEventListener("load", function () {
+  const div = document.getElementById("body-chat-inner");
+  div.scrollTop = div.scrollHeight; // scroll to bottom
+
+  const yesterday = new Date();
+	yesterday.setDate(yesterday.getDate() - 1);
+
+	const day = String(yesterday.getDate()).padStart(2, '0');
+	const month = String(yesterday.getMonth() + 1).padStart(2, '0'); // months are 0-based
+	const year = yesterday.getFullYear();
+
+	const formatted = `${day}.${month}.${year}`;
+
+  document.getElementById("yesterdayDate").innerHTML = formatted;
+});
+
+function createMsg() {
+
+	  const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+
+    const currentTime = hours + ":" + (minutes < 10 ? "0" + minutes : minutes);
+
+    if (hours < 12 ) {
+    	document.getElementById("timeActive").innerHTML = currentTime + ' AM';
+    } else {
+    	document.getElementById("timeActive").innerHTML = currentTime + ' PM';
+    }
+
+
+
+    /* ------------------------ */
+
+    const nowToday = new Date();
+
+		// add 2 minutes
+		nowToday.setMinutes(nowToday.getMinutes() + 2);
+
+		// DATE
+		const dateToday = `${String(nowToday.getDate()).padStart(2, '0')}.${String(nowToday.getMonth() + 1).padStart(2, '0')}.${nowToday.getFullYear()}`;
+
+		// TIME
+		const timeToday = `${String(nowToday.getHours()).padStart(2, '0')}:${String(nowToday.getMinutes()).padStart(2, '0')}`;
+
+		// HOURS PLUS ONE
+		const plusOneHour = new Date(now);
+			plusOneHour.setHours(plusOneHour.getHours() + 1);
+			plusOneHour.setMinutes(plusOneHour.getMinutes() + 2);
+
+		const timePlusOneHour = `${String(plusOneHour.getHours()).padStart(2, '0')}:${String(plusOneHour.getMinutes()).padStart(2, '0')}`;
+
+
+		document.getElementById("timeToday").innerHTML = timeToday;
+ 		document.getElementById("dateToday").innerHTML = dateToday;
+ 		document.getElementById("timeTodayAdd").innerHTML = timePlusOneHour;
+
+ 		// Generate Code
+
+ 		const generateString = () => {
+  const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numbers = "0123456789";
+
+  let result = "";
+  let numberCount = 0;
+
+  for (let i = 0; i < 8; i++) {
+    const canUseNumber = numberCount < 2;
+
+    const useNumber = canUseNumber && Math.random() < 0.25;
+
+    if (useNumber) {
+      result += numbers[Math.floor(Math.random() * numbers.length)];
+      numberCount++;
+    } else {
+      result += letters[Math.floor(Math.random() * letters.length)];
+    }
+  }
+
+  return result;
+};
+
+const randomString = generateString();
+
+		document.getElementById("timeToday").innerHTML = dateToday;
+ 		document.getElementById("dateToday").innerHTML = timeToday;
+ 		document.getElementById("timeTodayAdd").innerHTML = timePlusOneHour;
+ 		document.getElementById("randomCode").innerHTML = randomString;
+    
+  }
+
+ document.getElementById("newMsg").addEventListener("click", function(event) {
+    event.preventDefault(); // prevents page jump
+    createMsg();
+  });
+
+
+
+
+</script>
+</html>
