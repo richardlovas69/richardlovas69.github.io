@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WebApp-Chat</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="
+background-color: #1e1f24;
+">
+
+<div 
+
+style=
+"
+width: 40px;
+height: 40px;
+display: block;
+
+" 
+
+id="scrollUp">
+
+<a href="#">
+<img src="images/scrollUp-icon.png">
+</a>
+
+</div>
+
+<div 
+
+style=
+"
+ width: 45px;
+ height: 45px;
+ display: block;
+ position: sticky;
+ top: 80%;
+ left: calc(100% - 55px);
+ border-radius: 9999px;
+ z-index: 2;
+" 
+id="ai-icon">
+
+	<img src="images/ai-icon.png">
+
+</div>
+
+<div
+
+style=
+"
+ width: 45px;
+ height: 45px;
+ display: block;
+ position: sticky;
+ top: calc(80% + 55px);
+ left: calc(100% - 55px);
+ border-radius: 9999px;
+ z-index: 3;
+" 
+
+id="create-message">
+	<img src="images/newMessage-icon.png">
+</div>
+
+<header class="main-header">
+	<span id="spravy">
+	<h1>
+		Správy
+	</h1>
+	</span>
+	<img id="google" src="images/google.png">
+</header>
+
+<div class="search-account">
+
+	<div class="search-account-body">
+
+	<span><!-- Icon --></span>
+	<img id="search-icon" src="images/search-icon.png">
+	<img id="account-icon" src="images/account-icon.png">
+
+	</div>
+
+</div>
+
+<div class="body">
+	<div class="body-main">
+
+		<!-- Singular Message -->
+		<a href="message.html">
+		<div class="message">
+
+			<div class="message-left-image">
+				<img src="images/contact-icon.png">
+			</div>
+
+			<div class="message-center-text">
+
+				<div class="message-right-up">
+					<h2>1166</h2>
+				</div>
+
+				<div class="message-right-down">
+					<p>DPMK, a.s. ...</p>
+
+				</div>
+			</div>
+
+			<div class="message-right-icon">
+
+				<div class="day-week">
+					<p>so</p>
+				</div>
+
+				<div class="pin">
+					<img class="pin-contact" src="images/pin-contact.png">
+				</div>
+				
+			</div>
+
+		</div>
+		</a>
+
+		<!-- Singular Message END -->
+
+		<!-- 2 Message -->
+
+		<div class="message">
+
+			<div class="message-left-image">
+				<img src="images/mum-contact.png">
+			</div>
+
+			<div class="message-center-text">
+
+				<div class="message-right-up">
+					<h2>Mama</h2>
+				</div>
+
+				<div class="message-right-down">
+					<p>Chlebíčky sú v chladničke. 
+					<br>Kedy prídeš ?</p>
+
+				</div>
+			</div>
+
+			<div class="message-right-icon">
+
+				<div class="day-week">
+					<p>pi</p>
+				</div>
+
+				<div class="pin">
+
+					<img class="pin-contact" src="images/pin-contact.png">
+
+					<img class="unread" src="images/unread1.png">
+
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- 3 Message -->
+
+		<div class="message">
+
+			<div class="message-left-image">
+				<img src="images/contact-icon.png">
+			</div>
+
+			<div class="message-center-text">
+
+				<div class="message-right-up">
+					<h2>905</h2>
+				</div>
+
+				<div class="message-right-down">
+					<p>
+						Predmet : Digitálna faktúra
+						<br><br>
+
+						Skvelá správa! Uz ziadne<br>
+						zabudnute a stratene seky. Fakt...
+					</p>
+
+				</div>
+			</div>
+
+			<div class="message-right-icon">
+
+				<div class="day-week">
+					<p>2:35 PM</p>
+				</div>
+
+				<div class="pin">
+					<img class="pin-contact" src="images/pin-contact.png">
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- 4 Message -->
+
+		<div class="message">
+
+			<div class="message-left-image">
+				<img src="images/contact-icon.png">
+			</div>
+
+			<div class="message-center-text">
+
+				<div class="message-right-up">
+					<h2>Orange</h2>
+				</div>
+
+				<div class="message-right-down">
+					<p>Mily zakazník, vystavili sme<br>
+					   Vam fakturu v sume 53,00 eur S...
+					</p>
+
+				</div>
+			</div>
+
+			<div class="message-right-icon">
+
+				<div class="day-week">
+					<p>2:32 PM</p>
+				</div>
+
+				<div class="pin">
+					<img class="pin-contact" src="images/pin-contact.png">
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- 5 Message -->
+
+		<div class="message">
+
+			<div class="message-left-image">
+				<img src="images/contact-icon.png">
+			</div>
+
+			<div class="message-center-text">
+
+				<div class="message-right-up">
+					<h2>Orange Extra</h2>
+				</div>
+
+				<div class="message-right-down">
+					<p>OS: Optika MANIA oslavuje uz viac
+					<br>
+					ako 15 rokov v Aupark Kosice. 200 F...
+
+					</p>
+
+				</div>
+			</div>
+
+			<div class="message-right-icon">
+
+				<div class="day-week">
+					<p>2:32 PM</p>
+				</div>
+
+				<div class="pin">
+					<img class="pin-contact" src="images/pin-contact.png">
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- 6 Message -->
+
+		<div class="message">
+
+			<div class="message-left-image">
+				<img src="images/contact-icon.png">
+			</div>
+
+			<div class="message-center-text">
+
+				<div class="message-right-up">
+					<h2>Packeta</h2>
+				</div>
+
+				<div class="message-right-down">
+					<p>Zasielka Z3423301387 je pripravena n...
+					</p>
+
+				</div>
+			</div>
+
+			<div class="message-right-icon">
+
+				<div class="day-week">
+					<p>2:32 PM</p>
+				</div>
+
+				<div class="pin">
+					<img class="pin-contact" src="images/pin-contact.png">
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- 7 Message -->
+
+		<div class="message">
+
+			<div class="message-left-image">
+				<img src="images/contact-icon.png">
+			</div>
+
+			<div class="message-center-text">
+
+				<div class="message-right-up">
+					<h2>Oco</h2>
+				</div>
+
+				<div class="message-right-down">
+					<p>Vy: Ďakujem
+					</p>
+
+				</div>
+			</div>
+
+			<div class="message-right-icon">
+
+				<div class="day-week">
+					<p>2:32 PM</p>
+				</div>
+
+				<div class="pin">
+					<img class="pin-contact" src="images/pin-contact.png">
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- 8 Message -->
+
+		<div class="message">
+
+			<div class="message-left-image">
+				<img src="images/contact-icon.png">
+			</div>
+
+			<div class="message-center-text">
+
+				<div class="message-right-up">
+					<h2>Alza.sk</h2>
+				</div>
+
+				<div class="message-right-down">
+					<p>Pripravene v AlzaBoxe Kosice - Nad J...
+					</p>
+
+				</div>
+			</div>
+
+			<div class="message-right-icon">
+
+				<div class="day-week">
+					<p>2:32 PM</p>
+				</div>
+
+				<div class="pin">
+					<img class="pin-contact" src="images/pin-contact.png">
+				</div>
+				
+			</div>
+
+		</div>
+
+
+
+
+
+	</div>
+</div>
+
+
+
+
+</body>
+<script>
+		
+const threshold = 200;
+const el = document.getElementById('scrollUp');
+
+function handleScroll() {
+  if (!el) return;
+
+  if (window.scrollY > threshold) {
+    el.style.opacity = '1';
+    el.style.pointerEvents = 'auto';
+    el.style.position = 'sticky';
+    el.style.top = 'calc(100% - 200px)';
+    el.style.left = 'calc(50% - 20px)';
+  } else {
+    el.style.opacity = '0';
+    el.style.pointerEvents = 'none';
+    el.style.position = 'absolute';
+    el.style.top = '0';
+    el.style.left = '0';
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
+handleScroll();
+window.addEventListener('scroll', handleScroll);
+
+// run once on load
+handleScroll();
+
+
+
+</script>
+</html>
